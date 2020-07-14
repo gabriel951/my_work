@@ -4,14 +4,19 @@ written and the slides I have used for presentations.
 In case you have any doubts, feel free to contact me via email:
 gabrielfsilva1995@gmail.com.
 
+In all of my work, I collaborated with fellow researchers. I thank them!
+
 Here is an overview of the contents of each folder: 
 
-LOPSTR 19 - "A Certified Functional Nominal C-Unification Algorithm"
-UNIF 19 - "Formalising Nominal AC-Unification"
-Master Degree - My master thesis and slides
-Undergrad - My undergrad thesis and slides
-KDMiLe - "A Machine Learning Predictive System to Identify Students in Risk of
+NatFoM 2020 - "Why We Need Structured Proofs in Mathematics"
+LOPSTR 2019 - "A Certified Functional Nominal C-Unification Algorithm"
+UNIF 2019 - "Formalising Nominal AC-Unification"
+KDMiLe 2017 - "A Machine Learning Predictive System to Identify Students in Risk of
           Dropping Out of College"
-Workshop UnB 2020 - "Nominal C-Unification and Nominal C-Matching"
-Workshop UnB 2019 - "Functional Nominal C-Unification"
+
+Master Degree (2017-2019) - My master thesis and slides
+Undergrad (2013-2017) - My undergrad thesis and slides
+
+Workshop in Mathematics UnB 2020 - "Nominal C-Unification and Nominal C-Matching"
+Workshop in Mathematics UnB 2019 - "Functional Nominal C-Unification"
 
