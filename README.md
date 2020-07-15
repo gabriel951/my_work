@@ -1,11 +1,15 @@
+# Goal
 This repository is an attempt to make my work available, both the texts I have
 written and the slides I have used for presentations. 
 
+# Contact
 In case you have any doubts, feel free to contact me via email:
 gabrielfsilva1995@gmail.com.
 
+# Acknowledments
 In all of my work, I collaborated with fellow researchers. I thank them!
 
+# Overview
 Here is an overview of the contents of each folder: 
 
 NatFoM 2020 - "Why We Need Structured Proofs in Mathematics"
@@ -19,4 +23,3 @@ Undergrad (2013-2017) - My undergrad thesis and slides
 
 Workshop in Mathematics UnB 2020 - "Nominal C-Unification and Nominal C-Matching"
 Workshop in Mathematics UnB 2019 - "Functional Nominal C-Unification"
-
