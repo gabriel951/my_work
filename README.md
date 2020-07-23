@@ -7,7 +7,7 @@ In case you have any doubts, feel free to contact me via email:
 gabrielfsilva1995@gmail.com.
 
 # Acknowledments
-In all of my work, I collaborated with fellow researchers. I thank them!
+In all of my work, I collaborated with very nice people. I thank them!
 
 # Overview
 Here is an overview of the contents of each folder: 
