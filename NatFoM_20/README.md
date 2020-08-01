@@ -1,4 +1,4 @@
-# Nice Resource
+# Blog Post
 The work in this folder started with my blog post:
 > https://medium.com/@gabrielferreirasilva/why-we-need-structured-proofs-in-mathematics-34a3034f2f90
 
