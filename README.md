@@ -34,5 +34,7 @@ Workshop in Mathematics UnB 2019 - "Functional Nominal C-Unification"
 
 # More Info
 Currently I am a math undergrad student and a computer science PhD student at University of Brasília, Brasil. 
+
 I am part of the nominal research group at University of Brasília: http://nominal.cic.unb.br/ 
+
 I really like stackexchange! My stackexchange account is: https://math.stackexchange.com/users/719242/gabriel-f-silva
