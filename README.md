@@ -3,11 +3,11 @@ This repository is an attempt to make my work available, both the texts I have
 written and the slides I have used for presentations. 
 
 # Contact
-In case you have any doubts, feel free to contact me via email:
+In case you have any doubts/suggestions/comments feel free to contact me via email:
 gabrielfsilva1995@gmail.com.
 
 # Acknowledments
-In all of my work, I collaborated with very nice people. I thank them!
+In all of my work, I collaborated with very nice people. I am very grateful to them!
 
 # Overview
 Here is an overview of the contents of each folder: 
@@ -31,3 +31,8 @@ Undergrad (2013-2017) - My undergrad thesis and slides <br>
 Workshop in Mathematics UnB 2020 - "Nominal C-Unification and Nominal C-Matching"
 
 Workshop in Mathematics UnB 2019 - "Functional Nominal C-Unification"
+
+# More Info
+Currently I am a math undergrad student and a computer science PhD student at University of Brasília, Brasil. 
+I am part of the nominal research group at University of Brasília: http://nominal.cic.unb.br/ 
+I really like stackexchange! My stackexchange account is: https://math.stackexchange.com/users/719242/gabriel-f-silva
