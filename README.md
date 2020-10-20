@@ -37,4 +37,6 @@ Currently I am a math undergrad student and a computer science PhD student at Un
 
 I am part of the nominal research group at University of Brasília: http://nominal.cic.unb.br/ 
 
-I really like stackexchange! My stackexchange account is: https://math.stackexchange.com/users/719242/gabriel-f-silva
+I really like stackexchange! My main accounts are: [math](https://math.stackexchange.com/users/719242/gabriel-f-silva) and [CS](https://cs.stackexchange.com/users/118752/gabriel-f-silva).  
+
+I blogged once in Medium and I intend to do it again. [Here is my account](https://medium.com/@gabrielferreirasilva). 
