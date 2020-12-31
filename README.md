@@ -1,6 +1,5 @@
 # Goal
-Here you will find both the texts I have written and the slides I have used for presentations. 
-
+Here you will find both the texts I have written and the slides I have used for presentations. There is also a bit more stuff. 
 
 # Overview
 Here is an overview of the contents of each folder: 
@@ -26,10 +25,10 @@ Summer Workshop in Mathematics UnB 2020 - "Nominal C-Unification and Nominal C-M
 Summer Workshop in Mathematics UnB 2019 - "Functional Nominal C-Unification"
 
 ## [Other Informations](https://github.com/gabriel951/my_work/tree/master/others)
-A reading list of articles I found nice and other stuff.  
+My [CV](https://github.com/gabriel951/my_work/blob/master/others/cv.pdf), a reading list of articles I found nice and other stuff.  
 
 # More Info
-Currently I am a math undergrad student and a computer science PhD student at University of Brasília, Brasil. 
+Currently I am a computer science PhD student at University of Brasília, Brasil. 
 
 I am part of the [nominal](http://nominal.cic.unb.br/) research group at University of Brasília. 
 
