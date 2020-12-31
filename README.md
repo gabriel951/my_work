@@ -1,5 +1,5 @@
 # Goal
-Here you will find both the texts I have written and the slides I have used for presentations. There is also a bit more stuff. 
+Here you will find both the texts I have written and the slides I have used for presentations.  
 
 # Overview
 Here is an overview of the contents of each folder: 
