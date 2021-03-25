@@ -20,6 +20,8 @@ Master Degree (2017-2019) - My master thesis and slides
 Undergrad (2013-2017) - My undergrad thesis and slides <br>
 
 ## [Summer Workshop UnB](https://github.com/gabriel951/my_work/tree/master/summer_workshop_math_unb)
+Summer Workshop in Mathematics UnB 2021 - "Formalising Completeness of AC-unification"
+
 Summer Workshop in Mathematics UnB 2020 - "Nominal C-Unification and Nominal C-Matching"
 
 Summer Workshop in Mathematics UnB 2019 - "Functional Nominal C-Unification"
