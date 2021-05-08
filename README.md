@@ -4,7 +4,7 @@ Here you will find both the texts I have written and the slides I have used for 
 # Overview
 Here is an overview of the contents of each folder: 
 
-## [Conferences](https://github.com/gabriel951/my_work/tree/master/conferences)
+## [Publications](https://github.com/gabriel951/my_work/tree/master/conferences)
 NatFoM 2020 - "Why We Need Structured Proofs in Mathematics"
 
 LOPSTR 2019 - "A Certified Functional Nominal C-Unification Algorithm"

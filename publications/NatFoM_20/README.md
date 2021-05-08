@@ -8,5 +8,5 @@ conference we could submit and giving, as always, many helpful suggestions to ma
 the work better. Thanks to all people who read the blog post.  
 
 # Video 
-The video that will be shown in the conference is available in Youtube: 
+The video that was shown in the conference is available in Youtube: 
 > https://www.youtube.com/watch?v=IrG5AtoMeXw&t=15s
