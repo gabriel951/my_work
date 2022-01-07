@@ -1,8 +1,12 @@
 # Goal
-Here you will find both the texts I have written and the slides I have used for presentations.  
+Hi, welcome to my website! Here you will find both the texts I have written and the slides I have used for presentations.  
 
 # Overview
 Here is an overview of the contents of each folder: 
+
+## [Current Work](https://github.com/gabriel951/my_work/tree/master/current_work)
+I am currently working on formalising first-order AC-unification. Here you will find
+the (yet unpublished) work I am doing.  
 
 ## [Publications](https://github.com/gabriel951/my_work/tree/master/publications)
 MSCS 2021 - "Formalising Nominal C-unification Generalised With Protected Variables"
@@ -32,7 +36,10 @@ Summer Workshop in Mathematics UnB 2019 - "Functional Nominal C-Unification"
 My [CV](https://github.com/gabriel951/my_work/blob/master/others/cv.pdf), a reading list of articles I found nice and other stuff.  
 
 # More Info
-Currently I am a computer science PhD student at University of Brasília, Brasil. 
+Currently I am a computer science PhD student at University of Brasília, Brazil. My
+advisor is [Mauricio Ayala-Rincón](https://www.mat.unb.br/ayala/) and my co-advisor 
+is [Maribel Fernández](https://www.kcl.ac.uk/people/maribel-fernandez). We
+work with [Daniele Nantes](https://www.mat.unb.br/~dnantes/). 
 
 I am part of the [nominal](http://nominal.cic.unb.br/) research group at University of Brasília. 
 
@@ -46,3 +53,4 @@ gabrielfsilva1995@gmail.com.
 
 # Acknowledments
 In all of my work, I collaborated with very nice people. I am very grateful to them!
+:)
