@@ -52,5 +52,4 @@ In case you have any doubts/suggestions/comments feel free to contact me via ema
 gabrielfsilva1995@gmail.com.
 
 # Acknowledments
-In all of my work, I collaborated with very nice people. I am very grateful to them!
-:)
+In all of my work, I collaborated with very nice people. I am very grateful to them! :)
