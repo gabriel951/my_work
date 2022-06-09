@@ -1,6 +1,6 @@
-# Current Work 
-I am currently working on formalising AC-unification in first-order. I have finished proving termination, soundness and completeness of the algorithm. 
-Here you can find the paper we submitted to FSCD 2022 about that, as well as the slides and videos of two presentations: 
+# Info
+In addition to the extended version of the  paper that we have submitted to FSCD 2022, this repository contains slides and video of some presentations that I gave 
+for the group of "Theory of computation" at University of Brasília (UnB) about the content of the paper.   
 
 ## Presentation 1
 We had only soundness and termination at the time, and the
