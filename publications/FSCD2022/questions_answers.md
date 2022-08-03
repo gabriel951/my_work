@@ -66,6 +66,40 @@ According to page 11 of the manual:
 When we made the decision to not use mutual recursion, we imagined that the effort to
 emulate mutual recursion this way would be roughly the same than the approach we
 eventualy took. We imagined that emulating a mutually recursive algorithm in PVS would, 
-just like our approach, deviate slightly from the proofs in Fages paper.  In the end
+just like our approach, deviate slightly from the proofs in Fages paper. In the end
 we imagined that our approach would be slightly clearer to read and decided not to
 emulate mutual recursion. 
+
+**Question 6** - Is it possible to extract verified code from your implementation?
+
+**Answer 6** - We have not tried to extract verified code, but the path to do it would be to
+use the PVSIO feature that lets you execute verified algorithms inside the PVS
+environment and provides input and output operators. Our implementation uses list
+(instead of sets) to represent unification problems, which should not cause trouble
+to PVSIO. However, in our algorithm we test for equality modulo AC between two
+terms $t$ and $s$ via function `equal?(t, s)` and when $t$ and $s$ are AC-function
+symbols, this function  depends on the existence (see below) of numbers $i$ and $j$ such that the 
+$i$-th argument of $t$ is equal to the $j$-the argument of $s$. We guess that this
+may be problematic for PVSIO but we have not tried to be sure. 
+
+> equal?(t, s): RECURSIVE bool =  
+>    CASES t OF   
+>        const(a): s = const(a),
+>
+>	variable(X): s = variable(X), 
+>	
+>	unit: s = unit, 
+>	
+>	pair(t1, t2): pair?(s) AND equal?(t1, term1(s)) AND equal?(t2, term2(s)),
+>
+>	app(sym, arg): app?(s) AND sym = f_sym(s) AND num_arg(arg) = num_arg(arg(s)) AND equal?(arg, arg(s)),
+>
+>	ac_app(sym, arg):   
+>	   LET n = num_arg(sym, t) IN   
+>	   ac_app?(s) AND sym = ac_sym(s) AND   
+>	   EXISTS i, j:   
+>	   i > 0 AND i <= n AND j > 0 AND j <= n AND   
+>	   equal?(select(sym, t)(i), select(sym, s)(j)) AND   
+>	   equal?(delete(sym, t)(i), delete(sym, s)(j))   
+>    ENDCASES   
+> MEASURE size(t)    
