@@ -2,7 +2,7 @@
 This folder contains additional materials. Currently, it has my [CV](https://github.com/gabriel951/my_work/blob/master/others/cv.pdf), a subfolder to
 illustrate 
 [structured proofs](https://medium.com/@gabrielferreirasilva/why-we-need-structured-proofs-in-mathematics-34a3034f2f90) , an [unpublished paper that I 
-needed to cite for a report at my current work](), 
+needed to cite for a report at my current work](https://github.com/gabriel951/my_work/blob/master/others/unpublished_paper_from_work/artigo_maat.pdf), 
 and a list of articles I have read and found interesting (see below). 
 
 # Interesting Reading
