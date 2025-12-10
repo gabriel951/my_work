@@ -10,7 +10,8 @@ in all the teams's projects to disseminate knowledge to everyone. Hence, I worke
 ## Work in AI systems 
 My work in TJDFT was primary in some internal AI systems. There were 4 of them and in all of them we deployed using a **GitLab CI/CD pipeline**
 and **Kubernetes/Openshift** so I acquired a bit of experience with DevOps. These systems all employed the microsservice architecture and 
-had to frequently communicate between themselves. I also added documentation to some of these systems, and a good part of this documentation 
+had to frequently communicate between themselves. Almost all of this microsservices were written in **Python**. 
+I also added documentation to some of these systems, and a good part of this documentation 
 was wrote as **sequence diagrams in PlantUML**. The AI systems were Toth, Maat, Artemis and OdinGPT. 
 
 ### Toth 
@@ -19,11 +20,14 @@ distributed to the corresponding sector in TJDFT. Sometimes lawyers would mistak
 The consequence was a lot of rework: TJDFT's judicial analyst would have to rectify their mistake, send the lawsuit to the right sector and 
 people from the wrong sector would have analysed the lawsuit for nothing.  
 
-Toth was designed to minimize this problem. It is an NLP tool that analyses the lawsuit and suggests the class and the subject.
+Toth was designed to minimize this problem. It is an NLP tool that analyses the lawsuit and suggests the class and the subject. The final 
+decision is still up to the user, Toth only gives a suggestion. 
 
 While in TJDFT my contributions to Toth were: 
 
-1. 
+1. Helped add the information about the main subject of a lawsuit in the Toth **Postgree Database** which included 
+creating this column in the database using **Flyway (Java)** and altering Python code to insert information in this column. 
+2. 
 
 ### Maat 
 In the Brazilian judicial system we employ "Stay of Proceedings" and "Binding Precedent" to manage mass litigation and ensure jurisprudence 
@@ -66,25 +70,9 @@ Although not my main focus, sometimes I would work on constructing and
 maintaining some data dashboards that were important for the TJDFT's law
 experts. 
 
-### Dashboard of Class Actions 
-Class actions are a critical component of the legal system, especially in civil
-law, because they provide a mechanism for large groups of people—who have
-suffered the same harm—to seek justice collectively. We constructed a dashboard to show relevant information about it. 
-
-We used **Qlik Sense Desktop** to construct a dashboard showing strategic information about the number of class actions handled by TJDFT, dividing by: 
-whether this actions are being handled or were already handled; the amount per year; the amount per subject and per class. The dashboard 
-also contained more detailed data in the format of table with the list of each class action along with its instance, class, distribution date, 
-judging sector, description of the last update, date of last update, value of claim, main subject and judgement date 
-(if there was already a judgement). As expected the dashboard had filters, allowing the user to see only lawsuits from certain 
-instance, judging sector, assigned judge, class, judgement year, or the description of the last update. 
-
-While in TJDFT my contributions to this dashboards were: 
-
-
-
 ### Dashboard on Stay of Prooceedings 
 We created a dedicated dashboard to visualize TJDFT's lawsuits currently under "Stay of Proceedings" (*Sobrestamento* in Portuguese) 
-or that were under "Stay of Proceedings" in the past. A public version of this dashboard, in Portuguese, is available here. 
+or that were under "Stay of Proceedings" in the past. A public version of this dashboard, in Portuguese, is available [here](https://app.powerbi.com/view?r=eyJrIjoiYzg0NjdjZTMtZDQ2YS00MDZlLTk4NGMtZGRlZTM1MDM1NTgyIiwidCI6ImRjNDIwMDkyLTIyNDctNDMzMC04ZjE1LWY5ZDEzZWViZWRhNCJ9). 
 
 We used **Power BI** to construct a dashboard showing the total number of
 lawsuits currently under "Stay of Proceedings" or that were under "Stay of
@@ -101,6 +89,42 @@ has/has not being judged; and if it is/is not currently under "stay of
 proceedings". 
 
 While in TJDFT my contributions to this dashboard were: 
+1. Constructed, along a coworker, **Oracle SQL queries** that grouped information together in **materialized views** that were accessed 
+by the dashboard. Suggested the use of **Common Table Expressions** to my team to make the queries cleaner, 
+a concept the team was not familiar with.
+2. Along with a coworker, constructed the dashboard. 
+3. Mantained the dashboard for more than 2 years, adding information such as "Judges'Chambers/Special Courts/Trial Courts". 
+I also constructed an extended restricted dashboard that contained additional information about "weakly classified" lawsuits. 
+The dashboard required a **Power BI license** and would be used by approximately 10 people from a team called NUGEPNAC. 
+However we did not have that many licenses available so I also constructed a **Python program** that took the main information in 
+this dashboard and uploaded it as  `.csv` files in a One-Drive folder shared with NUGEPNAC. 
+4. The dashboard also showed some information mismatch with some internal reports, which I investigated and mapped 
+using **Jupyter Notebooks**. There were some small methodological differences between the two that explain the differences.
+
+
+### Dashboard of Class Actions 
+Class actions are a critical component of the legal system, especially in civil
+law, because they provide a mechanism for large groups of people—who have
+suffered the same harm—to seek justice collectively. We constructed a dashboard to show relevant information about it. 
+
+We used **Qlik Sense Desktop** to construct a dashboard showing strategic information about the number of class actions handled by TJDFT, dividing by: 
+whether this actions are being handled or were already handled; the amount per year; the amount per subject and per class. The dashboard 
+also contained more detailed data in the format of table with the list of each class action along with its instance, class, distribution date, 
+judging sector, description of the last update, date of last update, value of claim, main subject and judgement date 
+(if there was already a judgement). As expected the dashboard had filters, allowing the user to see only lawsuits from certain 
+instance, judging sector, assigned judge, class, judgement year, or the description of the last update. 
+
+While in TJDFT my contributions to this dashboards were: 
+
+1. Helped a coworker construct the **Oracle SQL queries** that grouped information together in materialized views that were accessed 
+by the dashboard. Suggested the use of **Common Table Expressions** to my team to make the queries cleaner, 
+a concept the team was not familiar with. 
+
+2. Helped the coworker construct **Oracle's Stored Procedures** to update the materialized views daily. 
+
+2. Constructed the dashboard under the supervision of another coworker. 
+
+
 
 
 ### Dashboard on e-Carta 
@@ -115,6 +139,17 @@ did not change. Hence, all I did in this project was:
 
 
 ## Other work 
+### DMJud 
+TJDFT and other courts in Brazil are supervised by CNJ (National Council of Justice). CNJ computes a set of metrics that it uses to 
+rank courts and award prizes to top courts. This is taken very seriously in TJDFT with everyone wanting to finish the year in the top spots. 
+CNJ computes this metrics/statistics according to some reasonable intricate business rules and updates them sparingly (sometimes once a month). 
+The project called DMJud computes (for TJDFT) the same metrics/statistics than CNJ but updates them much quicker (our aim is D-1). It uses 
+**Java Spring** and queries our **Oracle SQL database**. 
+
+While in TJDFT my contributions to this project were: 
+1. Along with 2 more colleagues, we helped the main developer by writting some unit tests in **Java**. 
+
+
 ### Article for PTD 
 In 2024, the current administration of TJDFT created PTD, the Digital Transformation Program (*Programa de Transformação Digital* in Portuguese) 
 to boost the efficiency and quality of Justice, through the improvement of systems and digital services with a user focus. In 2025 they decided to 
@@ -126,4 +161,9 @@ It is available here.
 ### Powercenter and ETL 
 An old version of Powercenter was the ETL tool used in TJDFT. I learned a tiny fraction of it and helped very briefly with a few
 ETL flows while in TJDFT.  
+
+### Stackoverflow for teams
+I pushed for my organization to adopt (the free version of) Stackoverflow for teams. When I left the platform had more than 
+70 posts, most of them with answers. The results were mixed. One one hand it was useful in when different colleagues asked the same question 
+and also when a new employee entered our team. On the other hand I was the only one who posted questions/answers. 
 
