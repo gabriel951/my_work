@@ -14,6 +14,8 @@ had to frequently communicate between themselves. Almost all of this microsservi
 I also added documentation to some of these systems, and a good part of this documentation 
 was wrote as **sequence diagrams in PlantUML**. The AI systems were Toth, Maat, Artemis and OdinGPT. 
 
+<! Se nao aparecer no futuro eu deveria citar que adquiri conhecimentos em RabbitMQ e -> 
+
 ### Toth 
 When a lawyer initiates a lawsuit, he has to point one class and one or more subjects. According to its class and subjects a lawsuit is 
 distributed to the corresponding sector in TJDFT. Sometimes lawyers would mistake the correct class and subjects for their lawsuit. 
@@ -27,7 +29,9 @@ While in TJDFT my contributions to Toth were:
 
 1. Helped add the information about the main subject of a lawsuit in the Toth **Postgree Database** which included 
 creating this column in the database using **Flyway (Java)** and altering Python code to insert information in this column. 
-2. 
+
+2. Along with my boss we extended Toth to handle lawsuits in second instance. This involved altering both **Python code** and **Java Spring code** 
+since there was a microservice written in Java that made HTTP request to the REST API to obtain information about lawsuit.  
 
 ### Maat 
 In the Brazilian judicial system we employ "Stay of Proceedings" and "Binding Precedent" to manage mass litigation and ensure jurisprudence 
@@ -134,7 +138,8 @@ written in the ELK Stack. The person that was responsible for mantaining it left
 we decided that I would redo it using **Power BI**. It was a relatively small task because the **SQL queries** to gather the necessary informations 
 did not change. Hence, all I did in this project was: 
 
-1. 
+1. Did some exploratory data analysis in **Jupyter** to understand the data returned by our **SQL queries**. 
+2. Constructed a **PowerBi Dashboard** mirroring a previous dashboard we had in the ELK stack. 
 
 
 
@@ -166,4 +171,8 @@ ETL flows while in TJDFT.
 I pushed for my organization to adopt (the free version of) Stackoverflow for teams. When I left the platform had more than 
 70 posts, most of them with answers. The results were mixed. One one hand it was useful in when different colleagues asked the same question 
 and also when a new employee entered our team. On the other hand I was the only one who posted questions/answers. 
+
+### Monitoring Codex
+Codex was a project that was experiencing some downtime. I helped a colleague implement a Python program that periodically checked whether 
+the service was on and if it was not then it send **notifications in Teams (via Power Automate), Telegram and email**. 
 
