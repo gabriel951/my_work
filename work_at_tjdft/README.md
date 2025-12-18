@@ -15,6 +15,7 @@ I also added documentation to some of these systems, and a good part of this doc
 was wrote as **sequence diagrams in PlantUML**. The AI systems were Toth, Maat, Artemis and OdinGPT. 
 
 <! Se nao aparecer no futuro eu deveria citar que adquiri conhecimentos em RabbitMQ e -> 
+<! Colocar que eu sei sobre o Keycloak-> 
 
 ### Toth 
 When a lawyer initiates a lawsuit, he has to point one class and one or more subjects. According to its class and subjects a lawsuit is 
@@ -31,16 +32,27 @@ While in TJDFT my contributions to Toth were:
 creating this column in the database using **Flyway (Java)** and altering Python code to insert information in this column. 
 
 2. Along with my boss we extended Toth to handle lawsuits in second instance. This involved altering both **Python code** and **Java Spring code** 
-since there was a microservice written in Java that made HTTP request to the REST API to obtain information about lawsuit.  
+since there was a microservice written in Java that made HTTP request to the REST API to obtain information about lawsuit. I also used this task 
+as an opportunity to refactor slightly the microsservice that trained the machine learning model.  
 
 ### Maat 
 In the Brazilian judicial system we employ "Stay of Proceedings" and "Binding Precedent" to manage mass litigation and ensure jurisprudence 
 uniformity. Maat is an AI system that suggests to a TJDFT's judicial analyst when he should apply "Stay of Proceedings" or "Binding Precedent" 
 to a process. 
 
+We needed specific information from TJDFT's expert (the team was called NUGEPNAC) to put in Maat's **Mongo**
+database. Hence we used **Streamlit** to create a website (we called maat-web) to allow them to insert the information we needed. 
+
 While in TJDFT my contributions to Maat were: 
 
-1. 
+1. Refactored a part of maat-web's code that a colleague had written, to decouple two different services and allow the user to use only one of
+them. This involved **Streamlit** (frontend) and **Python, Mongo** (backend).  
+2. Improved another page of the website adding a column to the **Streamlit** dashboard. 
+3. Created a tab in the website that allowed the user to exclude information from our **Mongo** database. Used **Keycloak** to handle 
+authentication/authorization since not every user of the website was allowed to use this feature. 
+4. Created a tab in the website that showed a list of lawsuits and allowed the user to fill/edit information (in a form) about them and register 
+in the database. Hence, the technologies involved were **Streamlit**, **Python** and **Mongo**.  
+
 
 ### Ártemis 
 Different judges have different approaches and for a given lawyer if may be beneficial to have its lawsuit judged by Judge X instead of Judge Y. 
@@ -51,7 +63,19 @@ Artemis is an AI system that tries to identify cases like this by analysing laws
 
 While in TJDFT my contributions to Artemis were: 
 
-1. 
+1. Added a field to Artemis' **Mongo database** main collection about lawsuits. 
+2. Added users, allowing them to access the system. 
+3. Added a new functionality that allows the Artemis user to import lawsuits and related ones (ones where the litigants/lawyer was the same) 
+to the Artemis database. In addition to 
+**Python** code this involved altering the frontend (using **Javascript, NodeJS, Bootstrap** and **Chrome Dev Tools** when things went wrong), 
+communicating with other microservices (using **RabbitMQ**), consulting and saving information in the database (using **Oracle SQL** and **Mongo**) 
+and deploying the new microsservice to **Openshift 3**. 
+4. Implemented logging in the frontend of Ártemis. Used this as an opportunity to simplify and standardize the structure of the system 
+(main commit had 547 insertions and 6175 deletions). Implementing the logger involved **Javascript/NodeJS** and **Pino**. When deploying fixed a 
+bug in the desenv environment that involved using **Helm/Openshift 4** to increase the timeout in a route. I also documented the website with a 
+simple `README.md` and documented the 5 different ways the frontend could communicate with the backend via **PlantUML sequence diagrams**. 
+
+
 
 
 ### OdinGPT
@@ -66,7 +90,17 @@ predefined prompts from our LLM (currently chatGPT).
 
 While in TJDFT my contributions to OdinGPT were: 
 
-1. 
+1. We wanted to extract the mention to regulations inside a lawsuit. I decided and implemented a **regular expression** that successfully 
+identified the regulations in a lawsuit. 
+2. Used **Python** to make HTTP requests to a REST API that contained useful data.  
+3. We wanted the user to rate how well OdinGPT was giving the information about lawsuits. I implemented a ranking functionality in Odin's 
+website (written in **Streamlit**) that allowed the user to rate OdinGPT's performance. 
+4. Fixed bug regarding the use of cookies in Odin's website. 
+5. This project gave me more experience in Keycloak: I extended **KeyCloak**'s token expiration time and also added users from our team 
+to adequate roles in **KeyCloak**'s client. 
+6. Consumed a **GraphQL** API to obtain information about the user (gender/role) which we used to customize the greetings' message in Odin. 
+7. Configured **PowerAutomate** to send messages notifying users about important events in Microsoft Teams. 
+
 
 
 ## Work in Data Visualization
@@ -152,7 +186,7 @@ The project called DMJud computes (for TJDFT) the same metrics/statistics than C
 **Java Spring** and queries our **Oracle SQL database**. 
 
 While in TJDFT my contributions to this project were: 
-1. Along with 2 more colleagues, we helped the main developer by writting some unit tests in **Java**. 
+1. Along with 2 more colleagues, we helped the main developer by writting some **unit tests in Java**. 
 
 
 ### Article for PTD 
